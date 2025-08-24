@@ -8,13 +8,13 @@ include(FetchContent)
 set(PopSift_BUILD_EXAMPLES OFF CACHE INTERNAL "")
 FetchContent_Declare(
   popsift
-  GIT_REPOSITORY https://github.com/alicevision/popsift
-  GIT_TAG        8623b697ac632f40d74f8773d646d6a804e89893
+  GIT_REPOSITORY https://github.com/NathanMOlson/popsift
+  GIT_TAG        e34fdc66c3055315c16879f2062a88d1db9fe501
 )
 set(FETCHCONTENT_QUIET OFF)
 FetchContent_MakeAvailable(popsift)
 
-add_subdirectory(pybind11)
+find_package(pybind11)
 
 pybind11_add_module(pypopsift src/main.cpp src/popsift.cpp)
 target_link_libraries(pypopsift PUBLIC popsift)
