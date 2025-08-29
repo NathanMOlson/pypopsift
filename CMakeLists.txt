@@ -8,8 +8,8 @@ include(FetchContent)
 set(PopSift_BUILD_EXAMPLES OFF CACHE INTERNAL "")
 FetchContent_Declare(
   popsift
-  GIT_REPOSITORY https://github.com/NathanMOlson/popsift
-  GIT_TAG        e34fdc66c3055315c16879f2062a88d1db9fe501
+  GIT_REPOSITORY https://github.com/alicevision/popsift
+  GIT_TAG        a19d394d280593f4f8a0692fa12f9a3e837a3df3
 )
 set(FETCHCONTENT_QUIET OFF)
 FetchContent_MakeAvailable(popsift)
